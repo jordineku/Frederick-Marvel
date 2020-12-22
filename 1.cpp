@@ -32,28 +32,28 @@ void dorongujung(int value){
   }
 }
 void tukeran(Node* node1, Node* node2) {
-    Node* temp1 = node1, * temp2 = node2;
+    Node* tempa = node1, * tempb = node2;
     while (temp1 && temp2) {
-        if (temp1->score < temp2->score) {
+        if (tempa->score < tempb->score) {
             // push(temp2->nilai, final);
-            dorongujung(temp1->score);
-            temp1 = temp1->next;
+            dorongujung(tempa->score);
+            tempa = tempa->next;
         }
         else {
             // push(temp1->nilai, final);
-            dorongujung(temp2->score);
-            temp2 = temp2->next;
+            dorongujung(tempb->score);
+            tempb = tempb->next;
         }
     }
-    while (temp1) {
+    while (tempa) {
         // push(temp1->nilai, final);
-        dorongujung(temp1->score);
-        temp1 = temp1->next;
+        dorongujung(tempa->score);
+        tempa = tempa->next;
     }
-    while (temp2) {
+    while (tempb) {
         // push(temp2->nilai, final);
-        dorongujung(temp2->score);
-        temp2 = temp2->next;
+        dorongujung(tempb->score);
+        tempb = tempb->next;
     }
 }
 
