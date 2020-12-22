@@ -35,23 +35,23 @@ void tukeran(Node* node1, Node* node2) {
     Node* tempa = node1, * tempb = node2;
     while (temp1 && temp2) {
         if (tempa->score < tempb->score) {
-            // push(temp2->nilai, final);
+
             dorongujung(tempa->score);
             tempa = tempa->next;
         }
         else {
-            // push(temp1->nilai, final);
+
             dorongujung(tempb->score);
             tempb = tempb->next;
         }
     }
     while (tempa) {
-        // push(temp1->nilai, final);
+
         dorongujung(tempa->score);
         tempa = tempa->next;
     }
     while (tempb) {
-        // push(temp2->nilai, final);
+
         dorongujung(tempb->score);
         tempb = tempb->next;
     }
